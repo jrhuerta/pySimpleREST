@@ -11,7 +11,8 @@ Base = declarative_base()
 class Post(Base):
     __tablename__ = 'post'
 
-    id = Column(primary_key=True, autoincrement=True, nullable=False)
+    id = Column('SomethingElse', Integer, primary_key=True, autoincrement=True,
+                nullable=False)
     title = Column(Unicode(255), nullable=False)
     published = Column(DateTime, nullable=False,
                        default=lambda: datetime.utcnow())
